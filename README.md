@@ -7,6 +7,7 @@
 ## 包含内容
 
 - `redscarf-method-router`
+- `redscarf`
 - `redscarf-verbal`
 - `redscarf-cloze`
 - `redscarf-data`
@@ -35,6 +36,7 @@
 
 各 skill 的职责：
 
+- `redscarf`：总路由，记不住细分 skill 时直接用它
 - `redscarf-method-router`：全局规则、数据字典、跨库定位
 - `redscarf-verbal`：阅读理解/言语理解
 - `redscarf-cloze`：逻辑填空/选词填空
