@@ -22,7 +22,7 @@
 给智能体的一句话安装提示词：
 
 ```text
-安装这个仓库里的整套 redscarf-* skills，包括 redscarf、redscarf-method-router、redscarf-verbal、redscarf-cloze、redscarf-data、redscarf-quant、redscarf-judgement、redscarf-error-diagnosis，只安装这些技能本体，不要把整个仓库当项目内容引入：https://github.com/liuyuexi1987/redscarf-gongkao-skills
+安装这个仓库里的整套 redscarf-* skills，包括 redscarf、redscarf-method-router、redscarf-verbal、redscarf-cloze、redscarf-data、redscarf-quant、redscarf-judgement、redscarf-error-diagnosis：https://github.com/liuyuexi1987/redscarf-gongkao-skills
 ```
 
 ## 使用
