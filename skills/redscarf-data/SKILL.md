@@ -1,6 +1,6 @@
 ---
 name: redscarf-data
-description: Use when the user is doing or reviewing 红领巾 资料分析 questions with tables/charts/statistical text, needs formula selection, estimation, comparison, or错因复盘 for 增长率、增长量、比重、平均数、倍数、基期/现期 and similar calculations.
+description: 当用户在做或复盘红领巾体系下的资料分析题时使用，适用于增长率、增长量、比重、平均数、倍数、基期、现期等题型；尤其适用于“这道资料分析怎么做”“公式怎么选”“能不能估算”“我为什么老算错”这类问法。
 ---
 
 # 红领巾资料分析 Skill

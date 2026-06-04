@@ -1,6 +1,6 @@
 ---
 name: redscarf-quant
-description: Use when the user is doing or reviewing 红领巾 数量关系 questions and needs to choose a solving strategy such as 方程、枚举、代入排除、排列组合、概率、行程、工程、几何, including when to skip or guess efficiently.
+description: 当用户在做或复盘红领巾体系下的数量关系题时使用，适用于方程、枚举、代入排除、排列组合、概率、行程、工程、几何等题型；尤其适用于“这题该列方程还是代入”“这题值不值得做”“怎么更快判断解法”这类问法。
 ---
 
 # 红领巾数量关系 Skill

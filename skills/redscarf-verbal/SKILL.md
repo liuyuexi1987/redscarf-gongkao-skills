@@ -1,6 +1,6 @@
 ---
 name: redscarf-verbal
-description: Use when the user is doing or reviewing 红领巾 公考阅读理解/言语理解 questions such as 主旨、意图、细节、结语、标题、语句排序/填句, especially when they provide a passage, ask how to read options, or want a错因复盘. Exclude 选词填空/逻辑填空; use redscarf-cloze for word-choice blanks.
+description: 当用户在做或复盘红领巾体系下的言语理解、阅读理解题时使用，包括主旨、意图、细节、结语、标题、语句排序、语句填空；尤其适用于“这道阅读理解怎么判断”“这题为什么排错”“帮我按红领巾方法复盘”这类问法。排除选词填空、逻辑填空，它们应走 redscarf-cloze。
 ---
 
 # 红领巾言语理解 Skill

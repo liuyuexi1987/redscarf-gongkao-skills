@@ -1,6 +1,6 @@
 ---
 name: redscarf-judgement
-description: Use when the user is doing or reviewing 红领巾 判断推理 questions such as 图形推理、定义判断、类比推理、逻辑判断、削弱加强, or asks how to identify reasoning traps and option mismatches.
+description: 当用户在做或复盘红领巾体系下的判断推理题时使用，适用于图形推理、定义判断、类比推理、逻辑判断、削弱加强等题型；尤其适用于“这道判断推理怎么排”“为什么这是偷换”“削弱加强先看什么”这类问法。
 ---
 
 # 红领巾判断推理 Skill

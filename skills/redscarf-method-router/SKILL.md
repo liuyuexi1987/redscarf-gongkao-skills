@@ -1,6 +1,6 @@
 ---
 name: redscarf-method-router
-description: Use when the user asks about 红领巾、公考复盘、方法库、考公做题策略、题型方法、错因诊断, or wants to search/reuse the generated redscarf method corpus inside this Obsidian vault.
+description: 当用户要查询红领巾方法库本身，而不是直接做题时使用。适用于“这个字段是什么意思”“unit_id/source_quote 怎么看”“方法库里有没有类似案例”“帮我查索引/数据字典/schema”这类问法。
 ---
 
 # 红领巾方法库路由 Skill

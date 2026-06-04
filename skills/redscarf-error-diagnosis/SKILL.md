@@ -1,6 +1,6 @@
 ---
 name: redscarf-error-diagnosis
-description: Use when the user wants to diagnose why a 公考 question or mock-exam result went wrong using 红领巾复盘 categories, and needs 表现/原因/修正策略 for 想太多、偷换、审题定位、细节误读、词汇盲区、计算估算失误 or策略问题.
+description: 当用户想按红领巾复盘体系诊断“这题为什么错了”时使用，适用于生成错因卡，或分析想太多、偷换、审题定位、细节误读、词汇盲区、计算估算失误、策略问题等错因；尤其适用于“帮我做错因卡”“我这题错在哪一步”“这次模考为什么老犯同一种错”这类问法。
 ---
 
 # 红领巾错因诊断 Skill

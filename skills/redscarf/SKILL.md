@@ -1,6 +1,6 @@
 ---
 name: redscarf
-description: Use when the user wants to use 红领巾 methods but does not know which specialized skill to call, or says 红领巾/红领巾方法/红领巾复盘/用红领巾分析这题. This is the top-level router for redscarf gongkao skills.
+description: 当用户说“红领巾”“红领巾方法”“红领巾复盘”“用红领巾分析这题”“按红领巾方法做”之类的话，但没有明确该用哪个子 skill 时，使用这个总路由。它负责把请求分发到言语理解、逻辑填空、资料分析、数量关系、判断推理、错因诊断或方法库查询。
 ---
 
 # 红领巾总路由 Skill

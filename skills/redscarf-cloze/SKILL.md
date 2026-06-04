@@ -1,6 +1,6 @@
 ---
 name: redscarf-cloze
-description: Use when the user is doing or reviewing 红领巾 逻辑填空/选词填空 questions, including 成语、实词、搭配、语境关系、词义轻重, or asks why a blank should choose one word over another. Exclude 阅读理解 passages such as 主旨/细节/结语/排序; use redscarf-verbal for those.
+description: 当用户在做或复盘红领巾体系下的逻辑填空、选词填空题时使用，包括成语、实词、搭配、语境关系、词义轻重；尤其适用于“这道填空为什么不能选A”“帮我看语境和搭配”“这个词为什么不对”这类问法。排除主旨、细节、结语、排序等阅读理解题，它们应走 redscarf-verbal。
 ---
 
 # 红领巾逻辑填空 Skill
