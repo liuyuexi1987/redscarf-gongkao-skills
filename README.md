@@ -22,7 +22,7 @@
 给智能体的一句话安装提示词：
 
 ```text
-请把这个仓库里的 redscarf-* skills 安装到当前项目的 .claude/skills/ 目录，只复制 skills/redscarf-*，不要复制别的文件：https://github.com/liuyuexi1987/redscarf-gongkao-skills
+把这个仓库里的 redscarf 技能装上，只装技能本体就行：https://github.com/liuyuexi1987/redscarf-gongkao-skills
 ```
 
 ## 使用
