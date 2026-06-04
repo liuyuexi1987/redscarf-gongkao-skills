@@ -32,6 +32,12 @@ mkdir -p ~/.claude/skills
 cp -R skills/redscarf-* ~/.claude/skills/
 ```
 
+给智能体的一句话安装提示词：
+
+```text
+请把这个仓库里的 redscarf-* skills 安装到当前项目的 .claude/skills/ 目录，只复制 skills/redscarf-*，不要复制别的文件：https://github.com/liuyuexi1987/redscarf-gongkao-skills
+```
+
 ## 使用
 
 示例问法：
@@ -62,5 +68,4 @@ cp -R skills/redscarf-* ~/.claude/skills/
 ## 仓库说明
 
 当前仓库只整理 skills 本体，适合独立发布和复用。
-
-如果要正式开源发布，建议补一个明确许可证文件，例如 `MIT`。
+仓库已经包含 `MIT` 许可证，可直接开源分发和复用。
