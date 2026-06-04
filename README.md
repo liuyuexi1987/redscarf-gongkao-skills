@@ -18,20 +18,6 @@
 
 ## 安装
 
-放到项目级 skills：
-
-```bash
-mkdir -p .claude/skills
-cp -R skills/redscarf-* .claude/skills/
-```
-
-放到全局 skills：
-
-```bash
-mkdir -p ~/.claude/skills
-cp -R skills/redscarf-* ~/.claude/skills/
-```
-
 给智能体的一句话安装提示词：
 
 ```text
