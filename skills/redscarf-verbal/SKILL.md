@@ -1,0 +1,36 @@
+---
+name: redscarf-verbal
+description: Use when the user is doing or reviewing 红领巾 公考阅读理解/言语理解 questions such as 主旨、意图、细节、结语、标题、语句排序/填句, especially when they provide a passage, ask how to read options, or want a错因复盘. Exclude 选词填空/逻辑填空; use redscarf-cloze for word-choice blanks.
+---
+
+# 红领巾言语理解 Skill
+
+用于回答言语理解题型的方法、错因、判断流程与复盘建议。
+
+## 使用流程
+
+1. 先读 `references/言语理解.md` 中对应题型段落。
+2. 若用户要按题型检索，再读 `references/言语理解题型索引.md` 的相关小节。
+3. 回答时优先输出：触发条件、判断流程、易错点、一个可回看的 `unit_id/source_quote`。
+4. 不要补全 OCR 题面；题面不可靠时只讲讲解里能支撑的方法。
+
+## 质量规则
+
+- `source_subtitle=asr` 的规则最多按中置信处理，并标注“据 ASR 讲解，术语/数字待核”。
+- 没有 `source_quote` 支撑的内容，只能作为推理建议，不能说成红领巾原方法。
+- 用户拿新题来问时，可以应用方法，但要区分“库内依据”和“当前题推理”。
+
+## 常用问法
+
+- “这道中心理解题我为什么排错了？帮我看主旨和选项偷换。”
+- “这道结语题按红领巾方法应该看最后一句还是全文脉络？”
+- “这段阅读理解我总想太多，帮我做一张言语复盘。”
+
+## 输出模板
+
+1. 题型识别：<主旨/意图/细节/结语/标题/排序/填句 + 触发依据>
+2. 红领巾判断流程：<找主题词/逻辑关系/选项分歧/排除路径>
+3. 易错点 / 陷阱：<偷换、过度推理、细节错位、主体变化等>
+4. 库内依据：<`source_quote` + `unit_id`；没有时说明无直接依据>
+5. 当前题推理：<只基于用户提供题干，不补全 OCR 缺口>
+6. 复盘动作：<下次固定检查项>
