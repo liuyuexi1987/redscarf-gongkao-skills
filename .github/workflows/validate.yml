@@ -1,0 +1,39 @@
+name: Validate 行测复盘 Skill
+
+on:
+  push: {}
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate Skill structure
+        run: python tools/validate_skill.py --skill-root skills/gongkao-review-pro
+      - name: Audit method library
+        run: python tools/audit_methods.py --skill-root skills/gongkao-review-pro
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Build release package
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: python tools/package_skill.py --version "${GITHUB_REF_NAME}"
+      - name: Upload package artifact
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: actions/upload-artifact@v4
+        with:
+          name: gongkao-review-pro-${{ github.ref_name }}
+          path: dist/*
+      - name: Publish GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*

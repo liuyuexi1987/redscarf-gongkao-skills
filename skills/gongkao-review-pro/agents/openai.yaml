@@ -1,0 +1,7 @@
+interface:
+  display_name: "行测复盘一体版"
+  short_description: "行测讲题、复盘、错因诊断、题库与复习管理"
+  default_prompt: "使用 $gongkao-review-pro 讲解或复盘这道行测题，并按规则处理答案核验和写回。"
+
+policy:
+  allow_implicit_invocation: true
