@@ -24,7 +24,7 @@ def run_check(script: Path, skill_root: Path) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--skill-root", default="skills/gongkao-review-pro")
-    parser.add_argument("--version", default="v1.4.0")
+    parser.add_argument("--version", default="v1.4.1")
     parser.add_argument("--out-dir", default="dist")
     args = parser.parse_args()
     skill_root = Path(args.skill_root).resolve()

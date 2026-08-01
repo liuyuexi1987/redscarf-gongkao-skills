@@ -134,7 +134,7 @@ git clone https://github.com/liuyuexi1987/xingce-review-pro.git
 
 ### 离线包
 
-仓库 `dist/` 中提供已打包的 `gongkao-review-pro-v1.4.0.zip`。解压后按客户端的 Skill 导入方式安装即可；离线包包含 `LICENSE` 和 `NOTICE`，不包含维护工具、测试和用户学习记录。
+仓库 `dist/` 与最新 Release 中提供已打包的 `gongkao-review-pro-v1.4.1.zip`。解压后按客户端的 Skill 导入方式安装即可；离线包包含 `LICENSE` 和 `NOTICE`，不包含维护工具、测试和用户学习记录。
 
 ## 开发与验证
 
@@ -142,7 +142,7 @@ git clone https://github.com/liuyuexi1987/xingce-review-pro.git
 python tools/validate_skill.py --skill-root skills/gongkao-review-pro
 python tools/audit_methods.py --skill-root skills/gongkao-review-pro
 python -m unittest discover -s tests -v
-python tools/package_skill.py --version v1.4.0
+python tools/package_skill.py --version v1.4.1
 ```
 
 ## 使用边界
