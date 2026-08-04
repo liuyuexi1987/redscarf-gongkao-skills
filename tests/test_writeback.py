@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = PROJECT_ROOT / "skills/gongkao-review-pro/scripts/writeback.py"
+SCRIPT = PROJECT_ROOT / "skills/xingce-review-pro/scripts/writeback.py"
 
 
 class WritebackTests(unittest.TestCase):
@@ -40,6 +40,7 @@ class WritebackTests(unittest.TestCase):
             "user_answer": "D",
             "verified_answer": "A",
             "error_reason": "把增长量比较当成增长率比较",
+            "explanation_completed": True,
             "method_refs": ["am-card-0004"],
             "next_review_prompt": "先写增长量，再还原基期比较增长率",
         }
@@ -105,6 +106,7 @@ class WritebackTests(unittest.TestCase):
                 "question_type": "增长率比较",
                 "weakness_key": "资料分析-增长率-增长率比较",
                 "result": "correct",
+                "explanation_completed": True,
                 "error_card": card_name,
                 "notes": "独立完成，能先还原基期",
             }
@@ -151,6 +153,17 @@ class WritebackTests(unittest.TestCase):
             code, receipt = self.run_writeback(cwd, payload)
             self.assertNotEqual(code, 0)
             self.assertEqual(receipt["status"], "blocked")
+            self.assertFalse((cwd / "复盘引擎").exists())
+
+    def test_writeback_gate_blocks_before_explanation(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            cwd = Path(directory)
+            payload = self.wrong_payload()
+            payload.pop("explanation_completed")
+            code, receipt = self.run_writeback(cwd, payload)
+            self.assertNotEqual(code, 0)
+            self.assertEqual(receipt["status"], "blocked")
+            self.assertEqual(receipt["code"], "writeback_gate")
             self.assertFalse((cwd / "复盘引擎").exists())
 
     def test_ambiguous_state_roots_block_without_writing(self) -> None:

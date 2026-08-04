@@ -23,7 +23,7 @@ def run_check(script: Path, skill_root: Path) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--skill-root", default="skills/gongkao-review-pro")
+    parser.add_argument("--skill-root", default="skills/xingce-review-pro")
     parser.add_argument("--version", default="v1.4.1")
     parser.add_argument("--out-dir", default="dist")
     args = parser.parse_args()
@@ -38,7 +38,7 @@ def main() -> int:
     if missing_files:
         raise SystemExit("缺少发布所需的许可证文件：" + "、".join(map(str, missing_files)))
 
-    package_name = f"gongkao-review-pro-{args.version}.zip"
+    package_name = f"xingce-review-pro-{args.version}.zip"
     archive = out_dir / package_name
     files = sorted(
         path
@@ -50,14 +50,14 @@ def main() -> int:
     )
     with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as handle:
         for path in files:
-            relative = Path("gongkao-review-pro") / path.relative_to(skill_root)
+            relative = Path("xingce-review-pro") / path.relative_to(skill_root)
             data = path.read_bytes()
             info = zipfile.ZipInfo(str(relative).replace(os.sep, "/"), date_time=(1980, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             handle.writestr(info, data)
         for path in licensing_files:
-            relative = Path("gongkao-review-pro") / path.name
+            relative = Path("xingce-review-pro") / path.name
             info = zipfile.ZipInfo(str(relative), date_time=(1980, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16

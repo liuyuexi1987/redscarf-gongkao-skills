@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Safe, idempotent Markdown writeback for gongkao-review-pro.
+"""Safe, idempotent Markdown writeback for xingce-review-pro.
 
 The model decides whether a write is allowed and supplies structured facts.
 This script only validates and persists those facts. It never grades a question
@@ -94,6 +94,11 @@ def validate_payload(payload: dict[str, Any]) -> None:
     if action in {"wrong_answer", "review_result"}:
         for key in ("module", "question_type", "weakness_key"):
             require_text(payload, key)
+        if payload.get("explanation_completed") is not True:
+            raise WritebackError(
+                "writeback_gate",
+                "只有完整讲解正文完成后，才能执行 wrong_answer 或 review_result 写回",
+            )
     if action == "wrong_answer":
         for key in (
             "question_text",
@@ -559,7 +564,7 @@ def apply_changes(changes: dict[Path, bytes], dry_run: bool) -> list[str]:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Apply validated gongkao-review-pro Markdown writeback")
+    parser = argparse.ArgumentParser(description="Apply validated xingce-review-pro Markdown writeback")
     parser.add_argument("--cwd", default=os.getcwd(), help="用户项目工作目录")
     parser.add_argument("--payload", default="-", help="JSON 文件路径；- 表示从 stdin 读取")
     parser.add_argument("--dry-run", action="store_true", help="只校验并列出将要写入的文件")

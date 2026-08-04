@@ -4,9 +4,9 @@
 
 ## 工作目录
 
-本项目资料通常安装在：
+本项目资料位于 Skill 安装目录内：
 
-- 技能目录：`.claude/skills/gongkao-review-*`
+- 技能目录：`xingce-review-pro/`
 - 包内入口：`references/method-libraries/综合方法库.md`
 
 ## 触发后先做什么

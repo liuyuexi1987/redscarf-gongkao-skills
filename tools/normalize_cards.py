@@ -83,7 +83,7 @@ def add_metadata(text: str, path: Path) -> tuple[str, list[str]]:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--root", default="skills/gongkao-review-pro/references/method-libraries/advanced-methods/方法卡")
+    parser.add_argument("--root", default="skills/xingce-review-pro/references/method-libraries/advanced-methods/方法卡")
     parser.add_argument("--write", action="store_true", help="写入规范化结果；默认只检查")
     args = parser.parse_args()
     root = Path(args.root)

@@ -1,13 +1,13 @@
 # 公考复盘错因诊断 Skill
 
-本文件只规定错因诊断内容和输出结构。意图门禁以 `SKILL.md` 为准；判错前读 `references/protocols/answer-authority.md`；写回和掌握升级只执行 `references/review-engine/复盘引擎说明.md`。
+本文件只规定错因诊断内容和输出结构。意图门禁以 `SKILL.md` 为准；答案来源需要裁决时读 `references/protocols/answer-authority.md`；单题错因写回读 `references/review-engine/写回运行协议.md`，考我、复习和掌握升级读 `references/review-engine/复盘引擎说明.md`。
 
 ## 强制模式确认
 
 每次触发本 skill，回答开头必须先写：
 
 ```text
-已进入 gongkao-review-error-diagnosis · 错因诊断模式。
+已进入 xingce-review-error-diagnosis · 错因诊断模式。
 ```
 
 ## 强制回答协议
@@ -18,12 +18,12 @@
 - 错因必须落到“表现、原因、修正策略”，不得只写“粗心”“想太多”这类空标签。
 - 如果方法库没有直接命中的同构 `source anchor（card id/文件名）`，必须写：`方法库无直接同构案例，以下主要是模型按公考复盘框架做的当前题诊断。`
 - 截图 OCR 可作为题面候选；若有“题面截图与讲解不匹配/疑似截偏”警告，先用题干关键词、选项、讲解主题和用户提供信息交叉核对，大体吻合时可低/中置信使用。
-- 诊断完成后仅在满足写回条件时按 `references/review-engine/复盘引擎说明.md` 写回。
+- 诊断完成后仅在满足写回条件时按 `references/review-engine/写回运行协议.md` 调用一次脚本。
 
 ## 使用流程
 
-1. 先读 `references/method-libraries/gongkao-review/错因诊断.md`。
-2. 若用户要案例或证据，再读 `references/method-libraries/gongkao-review/按错因查案例.md`。
+1. 先读 `references/method-libraries/xingce-review/错因诊断.md`。
+2. 若用户要案例或证据，再读 `references/method-libraries/xingce-review/按错因查案例.md`。
 3. 输出错因时固定包含：表现、原因、修正策略。
 4. 可附 1-3 个方法库相似依据摘要 + source anchor，但不要贴原文。
 
@@ -64,4 +64,4 @@
 
 ## 状态处理
 
-完成诊断后读取 `references/review-engine/复盘引擎说明.md`，按其中的结果分流、错题写回顺序和掌握升级执行；本文件不重复维护状态规则。
+单题错因按 `references/review-engine/写回运行协议.md` 写回；考我、复习、批量结果分流和掌握升级才读取 `references/review-engine/复盘引擎说明.md`。本文件不重复维护状态规则。

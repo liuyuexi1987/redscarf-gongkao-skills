@@ -11,11 +11,11 @@
 1. 先读题型协议的内联主卡。
 2. 未命中再查 AdvancedMethods 题型索引。
 3. 资料分析公式读取 DataNotes。
-4. GongkaoReview 只作二次校验与综述补充。
+4. XingceReview 只作二次校验与综述补充。
 
 | 目录 | 内容 |
 |---|---|
-| `gongkao-review/` | 公考复盘方法库 |
+| `xingce-review/` | 公考复盘方法库 |
 | `advanced-methods/` | 强化方法库 |
 | `data-notes/` | 资料分析专项方法库 |
 

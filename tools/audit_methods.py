@@ -107,7 +107,7 @@ def audit(skill_root: Path) -> dict[str, object]:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--skill-root", default="skills/gongkao-review-pro")
+    parser.add_argument("--skill-root", default="skills/xingce-review-pro")
     parser.add_argument("--json", action="store_true", dest="as_json")
     args = parser.parse_args()
     report = audit(Path(args.skill_root))

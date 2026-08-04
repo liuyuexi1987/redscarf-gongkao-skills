@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the standard gongkao-review-pro Skill package."""
+"""Validate the standard xingce-review-pro Skill package."""
 
 from __future__ import annotations
 
@@ -22,12 +22,15 @@ def frontmatter(text: str) -> tuple[str, str] | None:
     body = text[4:end]
     name = re.search(r"(?m)^name:\s*(.+)$", body)
     description = re.search(r"(?m)^description:\s*(.+)$", body)
-    return (name.group(1).strip(), description.group(1).strip()) if name and description else None
+    return (
+        name.group(1).strip(),
+        description.group(1).strip(),
+    ) if name and description else None
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--skill-root", default="skills/gongkao-review-pro")
+    parser.add_argument("--skill-root", default="skills/xingce-review-pro")
     args = parser.parse_args()
     root = Path(args.skill_root)
     errors: list[str] = []
@@ -38,6 +41,7 @@ def main() -> int:
         root / "references/protocols/answer-authority.md",
         root / "references/protocols/question-bank.md",
         root / "references/review-engine/复盘引擎说明.md",
+        root / "references/review-engine/写回运行协议.md",
     ]
     for path in required:
         if not path.exists():
@@ -49,16 +53,14 @@ def main() -> int:
             errors.append("SKILL.md frontmatter must contain name and description")
         else:
             name, description = parsed
-            if name != "gongkao-review-pro":
-                errors.append(f"Skill name must be gongkao-review-pro, got {name}")
-            if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name):
-                errors.append("Skill name is not hyphen-case")
+            if name != "行测复盘一体版":
+                errors.append(f"Skill name must be 行测复盘一体版, got {name}")
             if len(description) < 40:
                 errors.append("Skill description is too short")
     metadata = root / "agents/openai.yaml"
     if metadata.exists():
         text = metadata.read_text(encoding="utf-8")
-        for required_text in ("display_name:", "short_description:", "default_prompt:", "$gongkao-review-pro"):
+        for required_text in ("display_name:", "short_description:", "default_prompt:", "$xingce-review-pro"):
             if required_text not in text:
                 errors.append(f"agents/openai.yaml missing {required_text}")
     if list(root.rglob("README.md")):
