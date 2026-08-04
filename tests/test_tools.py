@@ -41,7 +41,7 @@ class MaintenanceToolTests(unittest.TestCase):
         self.assertNotIn("display_name_zh:", skill)
         for phrase in (
             "name: 行测复盘一体版",
-            "Skill v1.4.1",
+            "Skill v1.4.2",
             "v1.4 运行优化",
             "`行测解答`直接进入【解法】",
             "`行测复盘`进入【复盘】",
